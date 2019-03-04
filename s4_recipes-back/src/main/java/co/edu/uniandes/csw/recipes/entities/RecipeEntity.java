@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.csw.recipes.entities;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 
 /**
@@ -12,7 +13,7 @@ import javax.persistence.Entity;
  * @author CesarF
  */
 @Entity
-public class RecipeEntity extends BaseEntity {
+public class RecipeEntity extends BaseEntity implements Serializable{
     private String name;
     private String description;
     
