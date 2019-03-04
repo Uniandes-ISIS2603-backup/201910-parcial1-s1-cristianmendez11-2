@@ -25,7 +25,11 @@ public class RecipePersistence {
     
     @PersistenceContext(unitName = "recipesPU")
     protected EntityManager em;
-    
+    public RecipeEntity createRecipe(RecipeEntity recipeEntity)
+    {
+        em.persist(recipeEntity);
+        return recipeEntity;
+    }
   
     public RecipeEntity find(Long id) {
         return em.find(RecipeEntity.class, id);
